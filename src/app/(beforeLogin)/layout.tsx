@@ -7,7 +7,6 @@ export default function BeforeLoginLayout({
 }) {
   return (
     <>
-      <p>비포 로그인 레이아웃</p>
       {children}
       {modal}
     </>
