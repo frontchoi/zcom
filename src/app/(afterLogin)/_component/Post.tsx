@@ -1,3 +1,4 @@
+import { faker } from '@faker-js/faker';
 import dayjs from 'dayjs';
 import 'dayjs/locale/ko';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -16,9 +17,10 @@ export default function Post() {
       nickname: 'Elon Musk',
       image: '/yRsRRjGO.jpg',
     },
+    postId: 1,
     content: '클론코딩 라이브로 하니 너무 힘들어요 ㅠㅠ',
     createdAt: new Date(),
-    Images: [],
+    Images: [{ imageId: 1, link: faker.image.urlLoremFlickr() }],
   };
   return (
     <PostArticle post={target}>
