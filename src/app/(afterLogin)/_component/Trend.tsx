@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 import style from './trend.module.css';
 export default function Trend() {
   return (
@@ -7,5 +7,5 @@ export default function Trend() {
       <div className={style.title}>제로초</div>
       <div className={style.count}>1,234 posts</div>
     </Link>
-  );
+  )
 }

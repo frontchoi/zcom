@@ -1,36 +1,32 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-'use client';
+"use client";
 
-// import { useRouter } from 'next/navigation';
-import { useRouter } from 'next/navigation';
-import { ReactNode } from 'react';
+import {ReactNode} from "react";
 import style from './post.module.css';
+import {useRouter} from "next/navigation";
 
 type Props = {
-  children: ReactNode;
+  children: ReactNode,
   post: {
     postId: number;
-    content: string;
+    content: string,
     User: {
-      id: string;
-      nickname: string;
-      image: string;
-    };
-    createdAt: Date;
-    Images: any[];
-  };
-};
+      id: string,
+      nickname: string,
+      image: string,
+    },
+    createdAt: Date,
+    Images: any[],
+  }
+}
 
-export default function PostArticle({ children, post }: Props) {
+export default function PostArticle({ children, post}: Props) {
   const router = useRouter();
+  const onClick = () => {
+    router.push(`/${post.User.id}/status/${post.postId}`);
+  }
 
   return (
-    <article
-      className={style.post}
-      onClickCapture={() => {
-        router.push(`${post.User.id}/status/${post.postId}`);
-      }}
-    >
+    <article onClickCapture={onClick} className={style.post}>
       {children}
     </article>
   );

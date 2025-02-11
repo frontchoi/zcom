@@ -1,5 +1,7 @@
-import Home from '../../home/page';
+import Home from "@/app/(afterLogin)/home/page";
 
-export default function page() {
-    return <Home />;
+export default function Page() {
+  return (
+    <Home />
+  )
 }

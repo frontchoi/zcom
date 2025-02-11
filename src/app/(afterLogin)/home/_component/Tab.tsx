@@ -1,16 +1,16 @@
-'use client';
-import { useState } from 'react';
+"use client";
 import style from './tab.module.css';
+import {useState} from "react";
 
 export default function Tab() {
   const [tab, setTab] = useState('rec');
 
   const onClickRec = () => {
     setTab('rec');
-  };
+  }
   const onClickFol = () => {
     setTab('fol');
-  };
+  }
 
   return (
     <div className={style.homeFixed}>
@@ -26,5 +26,5 @@ export default function Tab() {
         </div>
       </div>
     </div>
-  );
+  )
 }

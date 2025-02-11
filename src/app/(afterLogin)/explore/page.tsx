@@ -1,6 +1,6 @@
-import Trend from '@/app/(afterLogin)/_component/Trend';
-import SearchForm from '../_component/SearchForm';
-import style from './explore.module.css';
+import style from "./explore.module.css";
+import SearchForm from "@/app/(afterLogin)/_component/SearchForm";
+import Trend from "@/app/(afterLogin)/_component/Trend";
 
 export default function Home() {
   return (
@@ -22,5 +22,5 @@ export default function Home() {
         <Trend />
       </div>
     </main>
-  );
+  )
 }
